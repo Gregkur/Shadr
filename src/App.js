@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import Palette from "./components/Palette";
 import seedColors from "./seedColors";
 
