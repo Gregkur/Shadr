@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import "../styles/Navbar.css";
 
 export default class Navbar extends Component {
   render() {
