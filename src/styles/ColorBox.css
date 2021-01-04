@@ -57,3 +57,39 @@
   text-transform: uppercase;
   font-size: 11px;
 }
+
+.copy-overlay {
+  opacity: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease-in-out;
+  transform: scale(0.1);
+}
+.copy-overlay.show {
+  opacity: 1;
+  z-index: 10;
+  transform: scale(10);
+  position: absolute;
+}
+
+.copy-msg {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  transform: scale(0.1);
+  opacity: 0;
+  color: white;
+  transition: 0.9s;
+}
+.copy-msg.show {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 25;
+}
