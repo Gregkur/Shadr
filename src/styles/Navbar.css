@@ -17,6 +17,10 @@
   text-decoration: none;
   color: black;
 }
+
+.slider-container {
+  display: flex;
+}
 .slider {
   width: 350px;
   margin: 0 22px;
@@ -40,4 +44,8 @@
 }
 .rc-slider-rail {
   height: 7px;
+}
+
+.select-container {
+  align-self: flex-end;
 }

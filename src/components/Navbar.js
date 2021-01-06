@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Slider from "rc-slider";
 import Select from "@material-ui/core/Select";
-import { MenuItem } from "@material-ui/core";
+import { MenuItem, Snackbar } from "@material-ui/core";
 import "rc-slider/assets/index.css";
 import "../styles/Navbar.css";
 
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
     this.props.handleChange(e.target.value);
   }
   render() {
-    const { level, changeLevel, handleChange } = this.props;
+    const { level, changeLevel } = this.props;
     const { format } = this.state;
     return (
       <header className="Navbar">
@@ -45,6 +45,7 @@ export default class Navbar extends Component {
             </Select>
           </div>
         </div>
+        <Snackbar></Snackbar>
       </header>
     );
   }
