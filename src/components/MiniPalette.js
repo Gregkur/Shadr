@@ -11,9 +11,7 @@ const styles = {
     overflow: "hidden",
     transition: "transform 0.3s ease-in-out",
     "&:hover": {
-      transitionDelay: "0.09s",
-      transform: "scale(1.2)",
-      filter: "brightness(101%)",
+      transform: "scale(1.1)",
       cursor: "pointer",
       opacity: "0.9",
       scale: "1.2",
@@ -57,7 +55,7 @@ function MiniPalette(props) {
   ));
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={props.handleClick}>
       <div className={classes.colors}>{miniColorBoxes}</div>
       <h5 className={classes.title}>
         {paletteName}
