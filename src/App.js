@@ -3,6 +3,7 @@ import seedColors from "./seedColors";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { generatePalette } from "./colorHelpers";
 import "./App.css";
+import PaletteList from "./components/PaletteList";
 
 function App() {
   function findPalette(id) {
@@ -16,7 +17,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <h1>This will be the main page</h1>}
+          render={() => <PaletteList palettes={seedColors} />}
         />
         <Route
           exact
