@@ -47,5 +47,6 @@
 }
 
 .select-container {
-  align-self: flex-end;
+  margin-right: 1rem;
+  margin-left: auto;
 }
