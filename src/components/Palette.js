@@ -29,6 +29,7 @@ export default class Palette extends Component {
         key={color.hex}
         colorId={color.id}
         paletteId={id}
+        showLink={true}
       />
     ));
     return (

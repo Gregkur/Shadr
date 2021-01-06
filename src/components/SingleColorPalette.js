@@ -7,7 +7,7 @@ export default class SingleColorPalette extends Component {
     super(props);
     this._shades = this.gatherShades(this.props.palette, this.props.colorId);
     this.state = { format: "hex" };
-    console.log(this._shades);
+    this.changeFormat = this.changeFormat.bind(this);
   }
 
   gatherShades(palette, filteredColor) {
@@ -20,22 +20,28 @@ export default class SingleColorPalette extends Component {
       );
     }
     //return given shades
-    return shades;
+    return shades.slice(1);
+  }
+
+  changeFormat(val) {
+    this.setState({ format: val });
   }
 
   render() {
     const { format } = this.state;
     const colorBoxes = this._shades.map((shade) => (
-      <ColorBox background={shade[format]} name={shade.name} key={shade.hex} />
+      <ColorBox
+        background={shade[format]}
+        name={shade.name}
+        key={shade.hex}
+        showLink={false}
+      />
     ));
     return (
       <div className="Palette">
-        <Navbar />
+        <Navbar sliderOpen={false} handleChange={this.changeFormat} />
         <div className="Palette-colors">{colorBoxes}</div>
-        <footer className="Palette-footer">
-          Color Name
-          <span className="Palette-emoji">emoji</span>
-        </footer>
+        <footer className="Palette-footer">Color Name</footer>
       </div>
     );
   }
