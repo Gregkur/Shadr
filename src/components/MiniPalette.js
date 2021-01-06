@@ -13,7 +13,13 @@ const styles = {
       cursor: "pointer",
     },
   },
-  colors: { backgroundColor: "grey", height: "150px", width: "100%" },
+  colors: {
+    backgroundColor: "#fffff",
+    height: "150px",
+    width: "100%",
+    borderRadius: "5px",
+    overflow: "hidden",
+  },
   title: {
     display: "flex",
     justifyContent: "space-between",
@@ -31,7 +37,7 @@ const styles = {
     display: "inline-block",
     margin: "0 auto",
     position: "relative",
-    marginBottom: "-3.5px",
+    marginBottom: "-4px",
   },
 };
 function MiniPalette(props) {
