@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = { format: "hex", open: false };
+    this.state = { format: "hex", open: false, sliderOpen: true };
     this.handleFormatChange = this.handleFormatChange.bind(this);
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
@@ -30,7 +30,7 @@ export default class Navbar extends Component {
   }
   render() {
     const { level, changeLevel } = this.props;
-    const { format, open } = this.state;
+    const { format, open, sliderOpen } = this.state;
     return (
       <header className="Navbar">
         <div className="logo">
