@@ -5,7 +5,7 @@ import MiniPalette from "./MiniPalette";
 
 const styles = {
   root: {
-    backgroundColor: "blue",
+    backgroundColor: "#F6E25D",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
@@ -21,8 +21,11 @@ const styles = {
   nav: {
     display: "flex",
     width: "100%",
-    justifyContent: "space-between",
+    justifyContent: "center",
     color: "white",
+    letterSpacing: "3px",
+    textTransform: "uppercase",
+    fontWeight: "300",
   },
   palettes: {
     boxSizing: "border-box",

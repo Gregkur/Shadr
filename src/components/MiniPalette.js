@@ -9,8 +9,14 @@ const styles = {
     padding: "0.5rem",
     position: "relative",
     overflow: "hidden",
+    transition: "transform 0.3s ease-in-out",
     "&:hover": {
+      transitionDelay: "0.09s",
+      transform: "scale(1.2)",
+      filter: "brightness(101%)",
       cursor: "pointer",
+      opacity: "0.9",
+      scale: "1.2",
     },
   },
   colors: {
