@@ -51,17 +51,12 @@
   width: 70%;
   left: 0px;
   bottom: 0px;
-  color: rgba(0, 0, 0, 0.8) ;
+  color: rgba(0, 0, 0, 0.8);
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 12px;
 }
-.light-text {
-  color: rgb(233, 233, 233);
-}
-.dark-text {
-  color: rgba(0, 0, 0, 0.8) !important;
-}
+
 .see-more {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
