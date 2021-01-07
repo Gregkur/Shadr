@@ -34,7 +34,7 @@ export default class SingleColorPalette extends Component {
       <ColorBox
         background={shade[format]}
         name={shade.name}
-        key={shade.hex}
+        key={shade.name}
         showLink={false}
       />
     ));
