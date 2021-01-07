@@ -110,7 +110,7 @@ export default [
   {
     paletteName: "Flat UI Colors Aussie",
     id: "flat-ui-colors-aussie",
-    emoji: "⛱",
+    emoji: "🌞",
     colors: [
       { name: "Beekeeper", color: "#f6e58d" },
       { name: "SpicedNectarine", color: "#ffbe76" },
@@ -164,7 +164,7 @@ export default [
   {
     paletteName: "Flat UI Colors Spanish",
     id: "flat-ui-colors-spanish",
-    emoji: "🇸",
+    emoji: "🍅",
     colors: [
       { name: "JacksonsPurple", color: "#40407a" },
       { name: "C64Purple", color: "#706fd3" },
@@ -191,7 +191,7 @@ export default [
   {
     paletteName: "Flat UI Colors Indian",
     id: "flat-ui-colors-indian",
-    emoji: "🇳",
+    emoji: "🍛",
     colors: [
       { name: "OrchidOrange", color: "#FEA47F" },
       { name: "SpiroDiscoBall", color: "#25CCF7" },
@@ -218,7 +218,7 @@ export default [
   {
     paletteName: "Flat UI Colors French",
     id: "flat-ui-colors-french",
-    emoji: "🇷",
+    emoji: "🍞",
     colors: [
       { name: "FlatFlesh", color: "#fad390" },
       { name: "MelonMelody", color: "#f8c291" },
