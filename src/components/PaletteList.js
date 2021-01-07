@@ -34,6 +34,7 @@ const styles = {
     gridGap: "5%",
   },
 };
+
 class PaletteList extends Component {
   goToPalette(id) {
     this.props.history.push(`/palette/${id}`);

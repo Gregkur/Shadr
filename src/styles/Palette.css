@@ -26,7 +26,6 @@
 .Palette-footer a:hover {
   transform: scale(1.2);
   opacity: 0.8;
-  /* outline: 1px solid black; */
 }
 .Palette-emoji {
   font-size: 1.5rem;

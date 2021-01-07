@@ -76,6 +76,7 @@ const styles = {
     cursor: "pointer",
   },
 };
+
 class ColorBox extends Component {
   constructor(props) {
     super(props);
@@ -112,7 +113,7 @@ class ColorBox extends Component {
             <h1 className={classes.copyText}>Copied!</h1>
             <p className={classes.copyText}>{background}</p>
           </div>
-          <div className="copy-container">
+          <div>
             <div className="box-content">
               <span className={classes.colorName}>{name}</span>
             </div>
