@@ -5,6 +5,7 @@ import { generatePalette } from "./colorHelpers";
 import "./App.css";
 import PaletteList from "./components/PaletteList";
 import SingleColorPalette from "./components/SingleColorPalette";
+import NewPaletteForm from "./components/NewPaletteForm";
 
 function App() {
   function findPalette(id) {
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/palette/new" render={() => <NewPaletteForm />} />
         <Route
           exact
           path="/"
