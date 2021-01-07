@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
+import { Link } from "react-router-dom";
 
 export default class SingleColorPalette extends Component {
   constructor(props) {
@@ -43,6 +44,7 @@ export default class SingleColorPalette extends Component {
         <div className="Palette-colors">{colorBoxes}</div>
         <footer className="Palette-footer">
           {this.props.palette.paletteName}
+          <Link to={`/palette/${this.props.palette.id}`}>Go Back</Link>
         </footer>
       </div>
     );
