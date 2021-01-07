@@ -59,6 +59,9 @@
 .light-text {
   color: white;
 }
+.dark-text {
+  color: black !important;
+}
 .see-more {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
