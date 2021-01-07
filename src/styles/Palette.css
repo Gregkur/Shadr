@@ -21,6 +21,12 @@
 .Palette-footer a {
   text-decoration: none;
   color: inherit;
+  transition: 0.4s;
+}
+.Palette-footer a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  /* outline: 1px solid black; */
 }
 .Palette-emoji {
   font-size: 1.5rem;

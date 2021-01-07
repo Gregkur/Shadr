@@ -44,7 +44,7 @@ export default class SingleColorPalette extends Component {
         <div className="Palette-colors">{colorBoxes}</div>
         <footer className="Palette-footer">
           {this.props.palette.paletteName}
-          <Link to={`/palette/${this.props.palette.id}`}>Go Back</Link>
+          <Link to={`/palette/${this.props.palette.id}`}>Back</Link>
         </footer>
       </div>
     );
