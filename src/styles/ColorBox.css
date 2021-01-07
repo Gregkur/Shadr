@@ -8,6 +8,14 @@
   margin-bottom: -4px;
 }
 
+.ShadeBox {
+  width: 11.1%;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
 .copy-button {
   width: 100px;
   height: 30px;
@@ -72,7 +80,7 @@
   overflow: hidden;
   opacity: 1;
   z-index: 10;
-  transform: scale(10);
+  transform: scale(50);
   position: absolute;
 }
 

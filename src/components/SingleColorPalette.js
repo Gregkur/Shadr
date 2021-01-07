@@ -41,7 +41,9 @@ export default class SingleColorPalette extends Component {
       <div className="Palette">
         <Navbar sliderOpen={false} handleChange={this.changeFormat} />
         <div className="Palette-colors">{colorBoxes}</div>
-        <footer className="Palette-footer">Color Name</footer>
+        <footer className="Palette-footer">
+          {this.props.palette.paletteName}
+        </footer>
       </div>
     );
   }

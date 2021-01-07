@@ -19,7 +19,10 @@ export default class ColorBox extends Component {
     const { copied } = this.state;
     return (
       <CopyToClipboard text={background} onCopy={this.changeCopyState}>
-        <div className="ColorBox" style={{ background }}>
+        <div
+          className={!showLink ? "ShadeBox ColorBox" : `ColorBox`}
+          style={{ background }}
+        >
           <div
             style={{ background }}
             className={`copy-overlay ${copied && `show`}`}
