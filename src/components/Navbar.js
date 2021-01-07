@@ -85,3 +85,6 @@ export default class Navbar extends Component {
     );
   }
 }
+Navbar.defaultProps = {
+  sliderOpen: true,
+};
