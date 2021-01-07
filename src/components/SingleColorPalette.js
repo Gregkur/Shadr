@@ -20,7 +20,7 @@ export default class SingleColorPalette extends Component {
       );
     }
     //return given shades
-    return shades.slice(1);
+    return shades.slice(1).reverse();
   }
 
   changeFormat(val) {
