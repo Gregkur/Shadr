@@ -84,6 +84,7 @@ export default function NewPaletteForm(props) {
   let [colors, setColors] = useState(props.seedColors);
   const [newColorName, setColorName] = useState("");
   const [newPaletteName, setPaletteName] = useState("");
+  const paletteIsFull = colors.length >= props.maxColors;
 
   useEffect(() => {
     ValidatorForm.addValidationRule("isColorNameUnique", (value) =>
@@ -218,7 +219,7 @@ export default function NewPaletteForm(props) {
             variant="outlined"
             color="primary"
             onClick={getRandomColor}
-            disabled={colors.length >= props.maxColors}
+            disabled={paletteIsFull}
           >
             Random Color
           </Button>
@@ -241,9 +242,9 @@ export default function NewPaletteForm(props) {
             color="primary"
             style={{ backgroundColor: currentColor }}
             type="submit"
-            disabled={colors.length >= props.maxColors}
+            disabled={paletteIsFull}
           >
-            ADD COLOR
+            {paletteIsFull ? "Palette is full" : "Add Color"}
           </Button>
         </ValidatorForm>
       </Drawer>
