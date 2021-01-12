@@ -14,6 +14,7 @@ import Button from "@material-ui/core/Button";
 import { HexColorPicker } from "react-colorful";
 import "react-colorful/dist/index.css";
 import DraggableColorBox from "./DraggableColorBox";
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
 const drawerWidth = 400;
 
