@@ -13,6 +13,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import Button from "@material-ui/core/Button";
 import { HexColorPicker } from "react-colorful";
 import "react-colorful/dist/index.css";
+import ColorBox from "./ColorBox";
 
 const drawerWidth = 400;
 
@@ -77,6 +78,7 @@ export default function NewPaletteForm() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState("#aabbcc");
+  const [colors, setColors] = useState(["#706fd3", "#474787"]);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -86,6 +88,13 @@ export default function NewPaletteForm() {
     setOpen(false);
   };
 
+  // const addNewColor = () => {
+  //   setColors({ colors: [...colors], color });
+  // };
+  const addNewColor = (event) => {
+    event.preventDefault();
+    setColors([...colors, color]);
+  };
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -136,9 +145,10 @@ export default function NewPaletteForm() {
         </div>
         <HexColorPicker color={color} onChange={setColor} />
         <Button
-          variant="outlined"
+          variant="contained"
           color="primary"
           style={{ backgroundColor: color }}
+          onClick={addNewColor}
         >
           ADD COLOR
         </Button>
@@ -149,6 +159,11 @@ export default function NewPaletteForm() {
         })}
       >
         <div className={classes.drawerHeader} />
+        <ul>
+          {colors.map((color) => (
+            <li style={{ backgroundColor: color }}>{color}</li>
+          ))}
+        </ul>
       </main>
     </div>
   );
