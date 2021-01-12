@@ -107,9 +107,11 @@ export default function NewPaletteForm(props) {
   };
 
   const savePalette = () => {
+    let newName = "New Test Palette";
     const newPalette = {
-      paletteName: "New Test Palette",
+      paletteName: newName,
       colors: colors,
+      id: newName.toLowerCase().replace(/ /g, "-"),
     };
     props.savePalette(newPalette);
     props.history.push("/");
@@ -138,7 +140,7 @@ export default function NewPaletteForm(props) {
           <Typography variant="h6" noWrap>
             Create a new Palette!
           </Typography>
-          <Button variant="outline" color="primary" onClick={savePalette}>
+          <Button variant="outlined" color="primary" onClick={savePalette}>
             Save Palette
           </Button>
         </Toolbar>
