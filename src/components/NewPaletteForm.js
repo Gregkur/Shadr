@@ -81,7 +81,8 @@ export default function NewPaletteForm(props) {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState("#aabbcc");
   const [colors, setColors] = useState([{ color: "blue", name: "blue" }]);
-  const [newName, setName] = useState("");
+  const [newColorName, setColorName] = useState("");
+  const [newPalletteName, setPalletteName] = useState("");
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -94,20 +95,25 @@ export default function NewPaletteForm(props) {
   const addNewColor = (event) => {
     const newColor = {
       color,
-      name: newName,
+      name: newColorName,
     };
     event.preventDefault();
     setColors([...colors, newColor]);
-    setName("");
+    setColorName("");
   };
 
-  const handleChange = (event) => {
-    event.preventDefault();
-    setName(event.target.value);
+  const handleColorChange = (event) => {
+    // event.preventDefault();
+    setColorName(event.target.value);
+  };
+
+  const handlePalletteChange = (event) => {
+    // event.preventDefault();
+    setPalletteName(event.target.value);
   };
 
   const savePalette = () => {
-    let newName = "New Test Palette";
+    let newName = newPalletteName;
     const newPalette = {
       paletteName: newName,
       colors: colors,
@@ -140,9 +146,16 @@ export default function NewPaletteForm(props) {
           <Typography variant="h6" noWrap>
             Create a new Palette!
           </Typography>
-          <Button variant="outlined" color="primary" onClick={savePalette}>
-            Save Palette
-          </Button>
+          <ValidatorForm onSubmit={savePalette}>
+            <TextValidator
+              value={newPalletteName}
+              name="newPalletteName"
+              onChange={handlePalletteChange}
+            />
+            <Button variant="outlined" color="primary" type="submit">
+              Save Palette
+            </Button>
+          </ValidatorForm>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -172,8 +185,9 @@ export default function NewPaletteForm(props) {
         <HexColorPicker color={color} onChange={setColor} />
         <ValidatorForm onSubmit={addNewColor}>
           <TextValidator
-            value={newName}
-            onChange={handleChange}
+            value={newColorName}
+            name="NewColorName"
+            onChange={handleColorChange}
             validators={["required"]}
             errorMessages={["this field is required"]}
           />
