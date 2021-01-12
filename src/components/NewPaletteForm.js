@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NewPaletteForm() {
+export default function NewPaletteForm(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState("#aabbcc");
@@ -106,11 +106,21 @@ export default function NewPaletteForm() {
     setName(event.target.value);
   };
 
+  const savePalette = () => {
+    const newPalette = {
+      paletteName: "New Test Palette",
+      colors: colors,
+    };
+    props.savePalette(newPalette);
+    props.history.push("/");
+  };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position="fixed"
+        color="default"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -128,6 +138,9 @@ export default function NewPaletteForm() {
           <Typography variant="h6" noWrap>
             Create a new Palette!
           </Typography>
+          <Button variant="outline" color="primary" onClick={savePalette}>
+            Save Palette
+          </Button>
         </Toolbar>
       </AppBar>
       <Drawer

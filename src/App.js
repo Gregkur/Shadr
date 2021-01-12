@@ -13,10 +13,19 @@ function App() {
       return palette.id === id;
     });
   }
+  const savePalette = (newPalette) => {
+    console.log(newPalette);
+  };
   return (
     <Router>
       <Switch>
-        <Route exact path="/palette/new" render={() => <NewPaletteForm />} />
+        <Route
+          exact
+          path="/palette/new"
+          render={(routeProps) => (
+            <NewPaletteForm savePalette={savePalette} {...routeProps} />
+          )}
+        />
         <Route
           exact
           path="/"
