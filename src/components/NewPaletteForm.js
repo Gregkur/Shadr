@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -79,10 +79,24 @@ const useStyles = makeStyles((theme) => ({
 export default function NewPaletteForm(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [color, setColor] = useState("#aabbcc");
+  const [currentColor, setColor] = useState("#aabbcc");
   const [colors, setColors] = useState([{ color: "blue", name: "blue" }]);
   const [newColorName, setColorName] = useState("");
-  const [newPalletteName, setPalletteName] = useState("");
+  const [newPaletteName, setPaletteName] = useState("");
+
+  useEffect(() => {
+    ValidatorForm.addValidationRule("isColorNameUnique", (value) =>
+      colors.every(({ name }) => name.toLowerCase() !== value.toLowerCase())
+    );
+    ValidatorForm.addValidationRule("isColorUnique", (value) =>
+      colors.every(({ color }) => color !== currentColor)
+    );
+    ValidatorForm.addValidationRule("isPaletteNameUnique", (value) =>
+      props.palettes.every(
+        ({ paletteName }) => paletteName.toLowerCase() !== value.toLowerCase()
+      )
+    );
+  });
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -94,7 +108,7 @@ export default function NewPaletteForm(props) {
 
   const addNewColor = (event) => {
     const newColor = {
-      color,
+      color: currentColor,
       name: newColorName,
     };
     event.preventDefault();
@@ -107,13 +121,13 @@ export default function NewPaletteForm(props) {
     setColorName(event.target.value);
   };
 
-  const handlePalletteChange = (event) => {
+  const handlePaletteChange = (event) => {
     // event.preventDefault();
-    setPalletteName(event.target.value);
+    setPaletteName(event.target.value);
   };
 
   const savePalette = () => {
-    let newName = newPalletteName;
+    let newName = newPaletteName;
     const newPalette = {
       paletteName: newName,
       colors: colors,
@@ -148,9 +162,12 @@ export default function NewPaletteForm(props) {
           </Typography>
           <ValidatorForm onSubmit={savePalette}>
             <TextValidator
-              value={newPalletteName}
-              name="newPalletteName"
-              onChange={handlePalletteChange}
+              label="Palette Name"
+              value={newPaletteName}
+              name="newPaletteName"
+              onChange={handlePaletteChange}
+              validators={["required", "isPaletteNameUnique"]}
+              errorMessages={["Enter Palette Name", "Name already used"]}
             />
             <Button variant="outlined" color="primary" type="submit">
               Save Palette
@@ -182,19 +199,23 @@ export default function NewPaletteForm(props) {
             Random Color
           </Button>
         </div>
-        <HexColorPicker color={color} onChange={setColor} />
+        <HexColorPicker color={currentColor} onChange={setColor} />
         <ValidatorForm onSubmit={addNewColor}>
           <TextValidator
             value={newColorName}
             name="NewColorName"
             onChange={handleColorChange}
-            validators={["required"]}
-            errorMessages={["this field is required"]}
+            validators={["required", "isColorNameUnique", "isColorUnique"]}
+            errorMessages={[
+              "Enter a color name",
+              "Color name must be unique",
+              "Color already used!",
+            ]}
           />
           <Button
             variant="contained"
             color="primary"
-            style={{ backgroundColor: color }}
+            style={{ backgroundColor: currentColor }}
             type="submit"
           >
             ADD COLOR
