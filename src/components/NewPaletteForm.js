@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -75,8 +75,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NewPaletteForm() {
   const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [color, setColor] = useState("#aabbcc");
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -134,8 +134,12 @@ export default function NewPaletteForm() {
             Random Color
           </Button>
         </div>
-        <HexColorPicker />
-        <Button variant="outlined" color="primary">
+        <HexColorPicker color={color} onChange={setColor} />
+        <Button
+          variant="outlined"
+          color="primary"
+          style={{ backgroundColor: color }}
+        >
           ADD COLOR
         </Button>
       </Drawer>
