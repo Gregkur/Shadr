@@ -32,6 +32,7 @@ function App() {
               savePalette={savePalette}
               palettes={palettes}
               seedColors={palettes[4].colors.slice(0, 11)}
+              maxColors="20"
               {...routeProps}
             />
           )}

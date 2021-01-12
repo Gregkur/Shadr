@@ -214,7 +214,12 @@ export default function NewPaletteForm(props) {
           <Button variant="outlined" color="secondary" onClick={clearColors}>
             Clear Palette
           </Button>
-          <Button variant="outlined" color="primary" onClick={getRandomColor}>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={getRandomColor}
+            disabled={colors.length >= props.maxColors}
+          >
             Random Color
           </Button>
         </div>
@@ -236,6 +241,7 @@ export default function NewPaletteForm(props) {
             color="primary"
             style={{ backgroundColor: currentColor }}
             type="submit"
+            disabled={colors.length >= props.maxColors}
           >
             ADD COLOR
           </Button>
