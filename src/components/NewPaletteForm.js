@@ -81,7 +81,7 @@ export default function NewPaletteForm(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [currentColor, setColor] = useState("#aabbcc");
-  let [colors, setColors] = useState([]);
+  let [colors, setColors] = useState(props.seedColors);
   const [newColorName, setColorName] = useState("");
   const [newPaletteName, setPaletteName] = useState("");
 
