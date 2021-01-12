@@ -10,8 +10,9 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import { ChromePicker } from "react-color";
 import Button from "@material-ui/core/Button";
+import { HexColorPicker } from "react-colorful";
+import "react-colorful/dist/index.css";
 
 const drawerWidth = 400;
 
@@ -126,19 +127,15 @@ export default function NewPaletteForm() {
         <Divider />
         <Typography variant="h4">Design Your Palette</Typography>
         <div>
-          <Button variant="contained" color="secondary">
+          <Button variant="outlined" color="secondary">
             Clear Palette
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="outlined" color="primary">
             Random Color
           </Button>
         </div>
-        <ChromePicker
-          color="purple"
-          disableAlpha="true"
-          onChangeComplete={(newColor) => console.log(newColor)}
-        />
-        <Button variant="contained" color="primary">
+        <HexColorPicker />
+        <Button variant="outlined" color="primary">
           ADD COLOR
         </Button>
       </Drawer>
