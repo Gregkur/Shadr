@@ -80,7 +80,8 @@ export default function NewPaletteForm() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState("#aabbcc");
-  const [colors, setColors] = useState(["#706fd3", "#474787"]);
+  const [colors, setColors] = useState([{ color: "blue", name: "blue" }]);
+  const [newName, setName] = useState("");
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -91,9 +92,20 @@ export default function NewPaletteForm() {
   };
 
   const addNewColor = (event) => {
+    const newColor = {
+      color,
+      name: newName,
+    };
     event.preventDefault();
-    setColors([...colors, color]);
+    setColors([...colors, newColor]);
+    setName("");
   };
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    setName(event.target.value);
+  };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -143,14 +155,22 @@ export default function NewPaletteForm() {
           </Button>
         </div>
         <HexColorPicker color={color} onChange={setColor} />
-        <Button
-          variant="contained"
-          color="primary"
-          style={{ backgroundColor: color }}
-          onClick={addNewColor}
-        >
-          ADD COLOR
-        </Button>
+        <ValidatorForm onSubmit={addNewColor}>
+          <TextValidator
+            value={newName}
+            onChange={handleChange}
+            validators={["required"]}
+            errorMessages={["this field is required"]}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            style={{ backgroundColor: color }}
+            type="submit"
+          >
+            ADD COLOR
+          </Button>
+        </ValidatorForm>
       </Drawer>
       <main
         className={clsx(classes.content, {
@@ -159,7 +179,11 @@ export default function NewPaletteForm() {
       >
         <div className={classes.drawerHeader} />
         {colors.map((color) => (
-          <DraggableColorBox color={color} key={color} />
+          <DraggableColorBox
+            color={color.color}
+            name={color.name}
+            key={color.color}
+          />
         ))}
       </main>
     </div>
