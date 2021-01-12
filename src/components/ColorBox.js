@@ -24,6 +24,17 @@ const styles = {
     cursor: "pointer",
     position: "relative",
   },
+  boxContent: {
+    position: "absolute",
+    padding: "10px 0px 10px 10px",
+    width: "70%",
+    left: "0px",
+    bottom: "0px",
+    color: "rgba(0, 0, 0, 0.8)",
+    letterSpacing: "1px",
+    textTransform: "uppercase",
+    fontSize: "12px",
+  },
   copyText: {
     color: (props) =>
       chroma(props.background).luminance() >= 0.6
@@ -114,7 +125,7 @@ class ColorBox extends Component {
             <p className={classes.copyText}>{background}</p>
           </div>
           <div>
-            <div className="box-content">
+            <div className={classes.boxContent}>
               <span className={classes.colorName}>{name}</span>
             </div>
             <button className={classes.copyButton}>Copy</button>
