@@ -146,6 +146,16 @@ export default function NewPaletteForm(props) {
     setColors((colors = arrayMove(colors, oldIndex, newIndex)));
   };
 
+  const clearColors = () => {
+    setColors([]);
+  };
+
+  const getRandomColor = () => {
+    const allColors = props.palettes.map((palette) => palette.colors).flat();
+    const randomColor = allColors[Math.floor(Math.random() * allColors.length)];
+    setColors([...colors, randomColor]);
+  };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -201,10 +211,10 @@ export default function NewPaletteForm(props) {
         <Divider />
         <Typography variant="h4">Design Your Palette</Typography>
         <div>
-          <Button variant="outlined" color="secondary">
+          <Button variant="outlined" color="secondary" onClick={clearColors}>
             Clear Palette
           </Button>
-          <Button variant="outlined" color="primary">
+          <Button variant="outlined" color="primary" onClick={getRandomColor}>
             Random Color
           </Button>
         </div>

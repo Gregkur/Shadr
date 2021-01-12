@@ -31,7 +31,7 @@ function App() {
             <NewPaletteForm
               savePalette={savePalette}
               palettes={palettes}
-              seedColors={palettes[4].colors.slice(0, 9)}
+              seedColors={palettes[4].colors.slice(0, 11)}
               {...routeProps}
             />
           )}
