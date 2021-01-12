@@ -236,7 +236,7 @@ export default function NewPaletteForm(props) {
           <DraggableColorBox
             color={color.color}
             name={color.name}
-            key={color.color}
+            key={color.name}
             handleClick={() => removeColor(color.name)}
           />
         ))}
