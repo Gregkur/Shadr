@@ -137,6 +137,10 @@ export default function NewPaletteForm(props) {
     props.history.push("/");
   };
 
+  const removeColor = (colorName) => {
+    setColors(colors.filter((color) => color.name !== colorName));
+  };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -233,6 +237,7 @@ export default function NewPaletteForm(props) {
             color={color.color}
             name={color.name}
             key={color.color}
+            handleClick={() => removeColor(color.name)}
           />
         ))}
       </main>
