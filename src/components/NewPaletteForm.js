@@ -54,6 +54,15 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  container: {
+    width: "90%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttons: {},
 }));
 
 export default function NewPaletteForm(props) {
@@ -124,26 +133,28 @@ export default function NewPaletteForm(props) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <Typography variant="h4">Design Your Palette</Typography>
-        <div>
-          <Button variant="outlined" color="secondary" onClick={clearColors}>
-            Clear Palette
-          </Button>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={getRandomColor}
-            disabled={paletteIsFull}
-          >
-            Random Color
-          </Button>
+        <div className={classes.container}>
+          <Divider />
+          <Typography variant="h4">Design Your Palette</Typography>
+          <div className={classes.buttons}>
+            <Button variant="outlined" color="secondary" onClick={clearColors}>
+              Clear Palette
+            </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={getRandomColor}
+              disabled={paletteIsFull}
+            >
+              Random Color
+            </Button>
+          </div>
+          <ColorPickerForm
+            paletteIsFull={paletteIsFull}
+            addNewColor={addNewColor}
+            colors={colors}
+          />
         </div>
-        <ColorPickerForm
-          paletteIsFull={paletteIsFull}
-          addNewColor={addNewColor}
-          colors={colors}
-        />
       </Drawer>
       <main
         className={clsx(classes.content, {
