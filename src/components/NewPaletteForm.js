@@ -240,7 +240,11 @@ export default function NewPaletteForm(props) {
           <Button
             variant="contained"
             color="primary"
-            style={{ backgroundColor: currentColor }}
+            style={{
+              backgroundColor: currentColor,
+              opacity: paletteIsFull ? "0.5" : "1",
+              color: "white",
+            }}
             type="submit"
             disabled={paletteIsFull}
           >
