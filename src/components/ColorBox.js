@@ -13,7 +13,7 @@ const styles = {
     display: "inline-block",
     cursor: "pointer",
     position: "relative",
-    marginBottom: "-4px",
+    marginBottom: "-6px",
     "&:hover button": { opacity: "1", transition: "0.5s" },
   },
   shadeBox: {
