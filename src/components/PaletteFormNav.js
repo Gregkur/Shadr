@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import clsx from "clsx";
+import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -11,7 +12,33 @@ import "react-colorful/dist/index.css";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { Link } from "react-router-dom";
 
-export default class PaletteFormNav extends Component {
+const drawerWidth = 400;
+
+const styles = (theme) => ({
+  root: {
+    display: "flex",
+  },
+  appBar: {
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+});
+class PaletteFormNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +64,7 @@ export default class PaletteFormNav extends Component {
     const { classes, open } = this.props;
     const { newPaletteName } = this.state;
     return (
-      <div>
+      <div className={classes.root}>
         {" "}
         <CssBaseline />
         <AppBar
@@ -60,6 +87,8 @@ export default class PaletteFormNav extends Component {
             <Typography variant="h6" noWrap>
               Create a new Palette!
             </Typography>
+          </Toolbar>
+          <div className={classes.navBtns}>
             <ValidatorForm
               onSubmit={() => this.props.savePalette(newPaletteName)}
             >
@@ -74,15 +103,17 @@ export default class PaletteFormNav extends Component {
               <Button variant="outlined" color="primary" type="submit">
                 Save Palette
               </Button>
-              <Link to="/">
-                <Button variant="outlined" color="secondary">
-                  Go Back
-                </Button>
-              </Link>
             </ValidatorForm>
-          </Toolbar>
+            <Link to="/">
+              <Button variant="outlined" color="secondary">
+                Go Back
+              </Button>
+            </Link>
+          </div>
         </AppBar>
       </div>
     );
   }
 }
+
+export default withStyles(styles)(PaletteFormNav);
