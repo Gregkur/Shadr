@@ -37,6 +37,9 @@ const styles = (theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  hide: {
+    display: "none",
+  },
 });
 class PaletteFormNav extends Component {
   constructor(props) {

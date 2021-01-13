@@ -1,10 +1,29 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { HexColorPicker } from "react-colorful";
+import { withStyles } from "@material-ui/core/styles";
 import "react-colorful/dist/index.css";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-
-export default class ColorPicker extends Component {
+const styles = {
+  root: {
+    width: "100%",
+  },
+  picker: {
+    width: "100% !important",
+    marginTop: "2rem",
+  },
+  addColor: {
+    width: "100%",
+    padding: "1rem",
+    marginTop: "1rem",
+    fontSize: "2rem",
+  },
+  colorNameInput: {
+    width: "100%",
+    height: "70px",
+  },
+};
+class ColorPickerForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,14 +65,22 @@ export default class ColorPicker extends Component {
     });
   };
   render() {
-    const { paletteIsFull } = this.props;
+    const { paletteIsFull, classes } = this.props;
     const { currentColor, newColorName } = this.state;
     return (
-      <div>
-        <HexColorPicker color={currentColor} onChange={this.setColor} />
+      <div className={classes.root}>
+        <HexColorPicker
+          color={currentColor}
+          onChange={this.setColor}
+          className={classes.picker}
+        />
         <ValidatorForm onSubmit={this.handleSubmit}>
           <TextValidator
+            variant="filled"
+            placeholder="Color Name"
+            margin="normal"
             value={newColorName}
+            className={classes.colorNameInput}
             name="NewColorName"
             onChange={this.handleColorChange}
             validators={["required", "isColorNameUnique", "isColorUnique"]}
@@ -66,6 +93,7 @@ export default class ColorPicker extends Component {
           <Button
             variant="contained"
             color="primary"
+            className={classes.addColor}
             style={{
               backgroundColor: currentColor,
               opacity: paletteIsFull ? "0.5" : "1",
@@ -81,3 +109,5 @@ export default class ColorPicker extends Component {
     );
   }
 }
+
+export default withStyles(styles)(ColorPickerForm);

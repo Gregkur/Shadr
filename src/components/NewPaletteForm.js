@@ -19,15 +19,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
-  hide: {
-    display: "none",
-  },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
   },
   drawerPaper: {
     width: drawerWidth,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   drawerHeader: {
     display: "flex",
@@ -62,7 +62,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  buttons: {},
+  buttons: {
+    width: "100%",
+  },
+  singleButton: {
+    width: "50%",
+  },
 }));
 
 export default function NewPaletteForm(props) {
@@ -128,19 +133,27 @@ export default function NewPaletteForm(props) {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
+        <div className={classes.drawerHeader} style={{ width: "100%" }}>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
         </div>
         <div className={classes.container}>
           <Divider />
-          <Typography variant="h4">Design Your Palette</Typography>
+          <Typography variant="h4" gutterBottom>
+            Design Your Palette
+          </Typography>
           <div className={classes.buttons}>
-            <Button variant="outlined" color="secondary" onClick={clearColors}>
+            <Button
+              className={classes.singleButton}
+              variant="outlined"
+              color="secondary"
+              onClick={clearColors}
+            >
               Clear Palette
             </Button>
             <Button
+              className={classes.singleButton}
               variant="outlined"
               color="primary"
               onClick={getRandomColor}
