@@ -51,9 +51,7 @@ class PaletteFormNav extends Component {
   }
 
   handlePaletteChange = (event) => {
-    // event.preventDefault();
     this.setState({ newPaletteName: event.target.value });
-    // setPaletteName(event.target.value);
   };
 
   componentDidMount() {
