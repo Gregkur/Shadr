@@ -16,14 +16,15 @@ function App() {
     syncLocalStorage();
   });
 
+  const syncLocalStorage = () => {
+    window.localStorage.setItem("palettes", JSON.stringify(palettes));
+  };
+
   function findPalette(id) {
     return palettes.find(function (palette) {
       return palette.id === id;
     });
   }
-  const syncLocalStorage = () => {
-    window.localStorage.setItem("palettes", JSON.stringify(palettes));
-  };
 
   const savePalette = (newPalette) => {
     setPalettes([...palettes, newPalette]);
@@ -33,6 +34,12 @@ function App() {
     setPalettes(palettes.filter((palette) => palette.id !== id));
   };
 
+  const getRandomColors = () => {
+    const allColors = palettes.map((palette) => palette.colors).flat();
+    const shuffled = allColors.sort(() => 0.5 - Math.random());
+
+    return shuffled.slice(0, 15);
+  };
   return (
     <Router>
       <Switch>
@@ -43,7 +50,7 @@ function App() {
             <NewPaletteForm
               savePalette={savePalette}
               palettes={palettes}
-              seedColors={palettes[4].colors.slice(0, 15)}
+              seedColors={getRandomColors}
               maxColors="20"
               {...routeProps}
             />
