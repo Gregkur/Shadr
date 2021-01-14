@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
-import { Link } from "react-router-dom";
 
 export default class SingleColorPalette extends Component {
   constructor(props) {

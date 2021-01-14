@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { withStyles } from "@material-ui/core";
+import { arrayMove } from "react-sortable-hoc";
 import clsx from "clsx";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
@@ -9,7 +10,6 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import Button from "@material-ui/core/Button";
 import "react-colorful/dist/index.css";
 import DraggableColorList from "./DraggableColorList";
-import { arrayMove } from "react-sortable-hoc";
 import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
 import styles from "../styles/NewPaletteFormStyles";

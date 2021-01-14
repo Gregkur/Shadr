@@ -1,28 +1,11 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
 import { HexColorPicker } from "react-colorful";
 import { withStyles } from "@material-ui/core/styles";
-import "react-colorful/dist/index.css";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-const styles = {
-  root: {
-    width: "100%",
-  },
-  picker: {
-    width: "100% !important",
-    marginTop: "2rem",
-  },
-  addColor: {
-    width: "100%",
-    padding: "1rem",
-    marginTop: "1rem",
-    fontSize: "2rem",
-  },
-  colorNameInput: {
-    width: "100%",
-    height: "70px",
-  },
-};
+import Button from "@material-ui/core/Button";
+import "react-colorful/dist/index.css";
+import styles from "../styles/ColorPickerFormStyles";
+
 class ColorPickerForm extends Component {
   constructor(props) {
     super(props);

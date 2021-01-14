@@ -1,13 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import { MenuItem, Snackbar } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import Slider from "rc-slider";
 import Select from "@material-ui/core/Select";
-import { MenuItem, Snackbar } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import "rc-slider/assets/index.css";
 import "../styles/Navbar.css";
-import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   constructor(props) {

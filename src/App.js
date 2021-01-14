@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Palette from "./components/Palette";
 import seedColors from "./seedColors";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { generatePalette } from "./colorHelpers";
 import "./App.css";
 import PaletteList from "./components/PaletteList";
