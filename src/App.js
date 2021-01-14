@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Palette from "./components/Palette";
 import seedColors from "./seedColors";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -9,13 +9,21 @@ import SingleColorPalette from "./components/SingleColorPalette";
 import NewPaletteForm from "./components/NewPaletteForm";
 
 function App() {
-  const [palettes, setPalettes] = useState(seedColors);
+  const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
+  const [palettes, setPalettes] = useState(savedPalettes || seedColors);
+
+  useEffect(() => {
+    syncLocalStorage();
+  });
 
   function findPalette(id) {
     return palettes.find(function (palette) {
       return palette.id === id;
     });
   }
+  const syncLocalStorage = () => {
+    window.localStorage.setItem("palettes", JSON.stringify(palettes));
+  };
 
   const savePalette = (newPalette) => {
     setPalettes([...palettes, newPalette]);

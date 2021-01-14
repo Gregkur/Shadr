@@ -68,6 +68,8 @@ function NewPaletteForm(props) {
         handleDrawerOpen={handleDrawerOpen}
       />
       <Drawer
+        onMouseLeave={handleDrawerClose}
+        onClose={handleDrawerOpen}
         className={classes.drawer}
         variant="persistent"
         anchor="left"
@@ -76,7 +78,7 @@ function NewPaletteForm(props) {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.container} onMouseLeave={handleDrawerClose}>
+        <div className={classes.container}>
           <Divider />
           <Typography variant="h4" gutterBottom>
             Design Your Palette
