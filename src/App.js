@@ -29,6 +29,10 @@ function App() {
     setPalettes([...palettes, newPalette]);
   };
 
+  const deletePalette = (id) => {
+    setPalettes(palettes.filter((palette) => palette.id !== id));
+  };
+
   return (
     <Router>
       <Switch>
@@ -49,7 +53,11 @@ function App() {
           exact
           path="/"
           render={(routeProps) => (
-            <PaletteList palettes={palettes} {...routeProps} />
+            <PaletteList
+              palettes={palettes}
+              {...routeProps}
+              deletePalette={deletePalette}
+            />
           )}
         />
         <Route
@@ -75,9 +83,6 @@ function App() {
         />
       </Switch>
     </Router>
-    // <div>
-    //   <Palette palette={generatePalette(seedColors[1])} />
-    // </div>
   );
 }
 

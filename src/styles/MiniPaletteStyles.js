@@ -43,7 +43,6 @@ const styles = {
     position: "relative",
     marginBottom: "-4px",
   },
-  delete: {},
   deleteIcon: {
     color: "white",
     backgroundColor: "#eb3d30",
@@ -55,9 +54,12 @@ const styles = {
     padding: "10px",
     zIndex: "10",
     opacity: "0",
-    transition: " all 0.3s ease-in-out",
+    transition: " all 0.4s ease-in-out",
+    borderBottomLeftRadius: "6px",
     "&:hover": {
       backgroundColor: "transparent",
+      transform: "scale(1.6)",
+      color: "#eb3d30",
     },
   },
 };

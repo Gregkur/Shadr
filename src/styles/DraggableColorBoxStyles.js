@@ -27,6 +27,9 @@ const styles = {
   },
   deleteIcon: {
     transition: "all 0.5s ease-in-out",
+    "&:hover": {
+      color: "#eb3d30 !important",
+    },
   },
 };
 export default styles;
