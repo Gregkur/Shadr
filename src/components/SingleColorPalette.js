@@ -31,7 +31,7 @@ class SingleColorPalette extends Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, palette } = this.props;
     const { format } = this.state;
     const colorBoxes = this._shades.map((shade) => (
       <ColorBox
@@ -47,7 +47,7 @@ class SingleColorPalette extends Component {
         <div className={classes.PaletteColors}>{colorBoxes}</div>
         <footer className={classes.PaletteFooter}>
           {this.props.palette.paletteName}
-          <Link to={`/palette/${this.props.palette.id}`}>Back</Link>
+          <Link to={`/palette/${palette.id}`}>Back</Link>
         </footer>
       </div>
     );

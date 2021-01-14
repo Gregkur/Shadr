@@ -1,4 +1,5 @@
 import chroma from "chroma-js";
+import sizes from "./sizes";
 const styles = {
   colorBox: {
     width: "20%",
@@ -9,14 +10,22 @@ const styles = {
     position: "relative",
     marginBottom: "-6px",
     "&:hover button": { opacity: "1", transition: "0.5s" },
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: "5%",
+    },
   },
+
   shadeBox: {
     width: "11.1%",
     height: "100%",
-    margin: "0 auto",
     display: "inline-block",
     cursor: "pointer",
     position: "relative",
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: "11.2%",
+    },
   },
   boxContent: {
     position: "absolute",

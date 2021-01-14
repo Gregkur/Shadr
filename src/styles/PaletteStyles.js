@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   Palette: {
     height: "100vh",
@@ -9,6 +11,7 @@ const styles = {
   PaletteColors: {
     height: "90%",
   },
+
   PaletteFooter: {
     marginLeft: "15px",
     marginRight: "15px",
@@ -28,9 +31,11 @@ const styles = {
       opacity: "0.8",
     },
   },
+
   PaletteEmoji: {
     fontSize: "1.5rem",
     margin: "0.5rem",
   },
 };
+
 export default styles;
