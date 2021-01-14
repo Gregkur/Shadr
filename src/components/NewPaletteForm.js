@@ -76,12 +76,7 @@ function NewPaletteForm(props) {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader} style={{ width: "100%" }}>
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-        <div className={classes.container}>
+        <div className={classes.container} onMouseLeave={handleDrawerClose}>
           <Divider />
           <Typography variant="h4" gutterBottom>
             Design Your Palette

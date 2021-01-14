@@ -7,7 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import PaletteIcon from "@material-ui/icons/Palette";
 import Button from "@material-ui/core/Button";
 import "react-colorful/dist/index.css";
 import PaletteMetaForm from "./PaletteMetaForm";
@@ -57,11 +57,12 @@ class PaletteFormNav extends Component {
             <IconButton
               color="inherit"
               aria-label="open drawer"
-              onClick={handleDrawerOpen}
+              // onClick={handleDrawerOpen}
+              onMouseOut={handleDrawerOpen}
               edge="start"
               className={clsx(classes.menuButton, open && classes.hide)}
             >
-              <MenuIcon />
+              <PaletteIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
               Create a new Palette!
