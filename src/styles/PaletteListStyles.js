@@ -1,3 +1,4 @@
+import sizes from "./sizes";
 const styles = {
   root: {
     backgroundColor: "#F6E25D",
@@ -12,6 +13,9 @@ const styles = {
     alignItems: "flex-start",
     flexDiraction: "column",
     flexWrap: "wrap",
+    [sizes.down("lg")]: {
+      width: "75%",
+    },
   },
   nav: {
     display: "flex",
@@ -28,10 +32,16 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(3, 30%)",
     gridGap: "5%",
+    [sizes.down("md")]: {
+      gridTemplateColumns: "repeat(2, 50%)",
+    },
+    [sizes.down("xs")]: {
+      gridTemplateColumns: "repeat(1, 100%)",
+      gridGap: "1.4rem",
+    },
   },
   footer: {
     justifySelf: "center",
-    gridColumn: "span 3",
     color: "white",
     letterSpacing: "3px",
     textTransform: "uppercase",
@@ -41,6 +51,18 @@ const styles = {
     padding: "21px",
     border: "3px solid #939597",
     transition: "background 0.3s 0s ease, transform 0.3s ease-in-out",
+    [sizes.down("xl")]: {
+      gridColumn: "span 3",
+    },
+    [sizes.down("lg")]: {
+      gridColumn: "span 3",
+    },
+    [sizes.down("md")]: {
+      gridColumn: "span 2",
+    },
+    [sizes.down("xs")]: {
+      gridColumn: "span 1",
+    },
     "&:hover": {
       transform: "scale(1.1)",
       cursor: "pointer",
