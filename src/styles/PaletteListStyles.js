@@ -24,7 +24,6 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    // color: "white",
     letterSpacing: "3px",
     textTransform: "uppercase",
     fontWeight: "300",
@@ -34,9 +33,10 @@ const styles = {
     width: "100%",
     display: "grid",
     gridTemplateColumns: "repeat(3, 30%)",
-    gridGap: "5%",
+    gridGap: "2.5rem",
     [sizes.down("md")]: {
       gridTemplateColumns: "repeat(2, 50%)",
+      marginBottom: "16px",
     },
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1, 100%)",
