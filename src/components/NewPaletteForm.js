@@ -67,7 +67,8 @@ function NewPaletteForm(props) {
       />
       <Drawer
         onMouseLeave={handleDrawerClose}
-        onClose={handleDrawerOpen}
+        onTouchEnd={handleDrawerClose}
+        onClose={handleDrawerClose}
         className={classes.drawer}
         variant="persistent"
         anchor="left"
