@@ -130,6 +130,9 @@ const styles = {
     opacity: "0",
     color: "white",
     flexDirection: "column",
+    [sizes.down("md")]: {
+      fontSize: "2rem",
+    },
     "& h1": {
       fontWeight: "400",
       textShadow: "1px 2px rgb(43, 43, 43)",
