@@ -33,12 +33,16 @@ const styles = (theme) => ({
   },
   navBtns: {
     marginRight: "1rem",
-    [sizes.down("xs")]: {
+    [sizes.down("md")]: {
       marginRight: "0",
     },
   },
   button: {
     margin: "0 0.5rem",
+    [sizes.down("sm")]: {
+      margin: "0 0.2rem",
+      padding: "0",
+    },
   },
 });
 export default styles;

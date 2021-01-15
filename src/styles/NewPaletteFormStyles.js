@@ -15,6 +15,9 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    [sizes.down("xs")]: {
+      width: "500px",
+    },
   },
   drawerHeader: {
     display: "flex",
@@ -50,9 +53,15 @@ const styles = (theme) => ({
   },
   buttons: {
     width: "100%",
+    [sizes.down("sm")]: {
+      width: "80%",
+    },
   },
   singleButton: {
     width: "50%",
+    [sizes.down("sm")]: {
+      width: "40%",
+    },
   },
 });
 export default styles;
