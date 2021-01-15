@@ -10,6 +10,14 @@ const styles = {
     position: "relative",
     marginBottom: "-6px",
     "&:hover button": { opacity: "1", transition: "0.5s" },
+    [sizes.down("lg")]: {
+      width: "25%",
+      height: "20%",
+    },
+    [sizes.down("md")]: {
+      width: "50%",
+      height: "10%",
+    },
     [sizes.down("xs")]: {
       width: "100%",
       height: "5%",
