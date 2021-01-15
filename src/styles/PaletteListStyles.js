@@ -2,14 +2,13 @@ import sizes from "./sizes";
 import bg from "./bg.svg";
 const styles = {
   root: {
-    backgroundColor: "#f0220",
+    backgroundColor: "#fffff",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "center",
     overflowY: "scroll",
-    /* background by SVGBackgrounds.com */
-    backgroundImage: `url("${bg}")`,
+    backgroundImage: `url(${bg})`,
   },
   container: {
     width: "50%",
@@ -46,15 +45,16 @@ const styles = {
   },
   footer: {
     justifySelf: "center",
-    color: "white",
+    color: "rgba(0, 0, 0, 0.87)",
     letterSpacing: "3px",
     textTransform: "uppercase",
     fontWeight: "bold",
     textDecoration: "none",
     borderRadius: "39px",
     padding: "21px",
-    border: "3px solid #939597",
-    transition: "background 0.3s 0s ease, transform 0.3s ease-in-out",
+    border: "1px solid rgba(0, 0, 0, 0.87)",
+    transition:
+      "background 0.5s 0s ease, transform 0.3s ease-in-out, color 0.5s ease-in-out",
     [sizes.down("xl")]: {
       gridColumn: "span 3",
     },
@@ -73,6 +73,7 @@ const styles = {
       opacity: "0.9",
       scale: "1.2",
       backgroundColor: "#fcdd14",
+      color: "white",
     },
   },
 };

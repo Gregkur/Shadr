@@ -18,7 +18,7 @@ class PaletteList extends Component {
             <Logo />
           </nav>
           <div className={classes.palettes}>
-            {palettes.slice(3).map((palette) => (
+            {palettes.map((palette) => (
               <MiniPalette
                 {...palette}
                 key={palette.id}
@@ -27,7 +27,7 @@ class PaletteList extends Component {
               />
             ))}
             <Link className={classes.footer} to="/palette/new">
-              Create a new palette!
+              Create a new palette
             </Link>
           </div>
         </div>
