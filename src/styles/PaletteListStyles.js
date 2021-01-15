@@ -25,7 +25,7 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    color: "white",
+    // color: "white",
     letterSpacing: "3px",
     textTransform: "uppercase",
     fontWeight: "300",
