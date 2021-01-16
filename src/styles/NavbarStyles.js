@@ -1,6 +1,8 @@
 import sizes from "./sizes";
 const styles = {
   Navbar: {
+    borderBottom: "5px solid white",
+    backgroundColor: "#fcdd14",
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
@@ -15,7 +17,7 @@ const styles = {
     marginRight: "15px",
     padding: "0 13px",
     fontSize: "22px",
-    backgroundColor: "#eceff1",
+    // backgroundColor: "#eceff1",
     height: "100%",
     display: "flex",
     alignItems: "center",

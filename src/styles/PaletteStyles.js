@@ -1,5 +1,3 @@
-import sizes from "./sizes";
-
 const styles = {
   Palette: {
     height: "100vh",
@@ -13,18 +11,21 @@ const styles = {
   },
 
   PaletteFooter: {
-    marginLeft: "15px",
-    marginRight: "15px",
-    backgroundColor: "white",
+    borderTop: "5px solid white",
+    backgroundColor: "#fcdd14",
     height: "5vh",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     fontWeight: "bold",
+    "& span": {
+      marginLeft: "0.5rem",
+    },
     "& a": {
       textDecoration: "none",
       color: "inherit",
       transition: "0.4s",
+      marginRight: "0.5rem",
     },
     "& :hover": {
       transform: "scale(1.2)",
