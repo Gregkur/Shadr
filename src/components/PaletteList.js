@@ -24,12 +24,14 @@ class PaletteList extends Component {
     super(props);
     this.state = {
       openDeleteDialog: false,
+      deletingId: "",
     };
     this.openDialog = this.openDialog.bind(this);
     this.closeDialog = this.closeDialog.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
-  openDialog() {
-    this.setState({ openDeleteDialog: true });
+  openDialog(id) {
+    this.setState({ openDeleteDialog: true, deletingId: id });
   }
   closeDialog() {
     this.setState({ openDeleteDialog: false });
@@ -37,8 +39,12 @@ class PaletteList extends Component {
   goToPalette(id) {
     this.props.history.push(`/palette/${id}`);
   }
+  handleDelete() {
+    this.props.deletePalette(this.state.deletingId);
+    this.setState({ openDeleteDialog: false });
+  }
   render() {
-    const { palettes, classes, deletePalette } = this.props;
+    const { palettes, classes } = this.props;
     const { openDeleteDialog } = this.state;
     return (
       <div className={classes.root}>
@@ -70,7 +76,7 @@ class PaletteList extends Component {
             Delete this palette?
           </DialogTitle>
           <List>
-            <ListItem button onClick={deletePalette}>
+            <ListItem button onClick={this.handleDelete}>
               <ListItemAvatar>
                 <Avatar
                   style={{ backgroundColor: blue[100], color: blue[600] }}
