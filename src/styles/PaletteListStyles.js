@@ -1,16 +1,15 @@
 import sizes from "./sizes";
 import bg from "./bg.svg";
 const styles = {
-  // "@global": {
-  //   ".fade-exit": {
-  //     opacity: 0.9,
-  //   },
-  //   ".fade-exit-active": {
-  //     opacity: 0,
-  //     transform: "none",
-  //     transition: "opacity 0.1s ease-out",
-  //   },
-  // },
+  "@global": {
+    ".fade-exit": {
+      opacity: 1,
+    },
+    ".fade-exit-active": {
+      opacity: 0,
+      transition: "opacity 0.3s ease-out",
+    },
+  },
   root: {
     // linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(252,221,20,0.9) 70%)
     height: "100vh",
