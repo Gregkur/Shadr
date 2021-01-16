@@ -47,6 +47,7 @@ class ColorPickerForm extends Component {
       newColorName: "",
     });
   };
+
   render() {
     const { paletteIsFull, classes } = this.props;
     const { currentColor, newColorName } = this.state;

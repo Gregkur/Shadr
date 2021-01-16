@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
+
+import { withStyles } from "@material-ui/styles";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import List from "@material-ui/core/List";
@@ -12,10 +13,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import CheckIcon from "@material-ui/icons/Check";
 import CloseIcon from "@material-ui/icons/Close";
 import Avatar from "@material-ui/core/Avatar";
-import MiniPalette from "./MiniPalette";
+
 import styles from "../styles/PaletteListStyles";
+import MiniPalette from "./MiniPalette";
 import Logo from "./Logo";
-import { withRouter } from "react-router";
 
 class PaletteList extends Component {
   constructor(props) {

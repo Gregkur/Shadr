@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import { withStyles } from "@material-ui/styles";
+
+import styles from "../styles/PaletteStyles";
+
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
-import styles from "../styles/PaletteStyles";
 
 class SingleColorPalette extends Component {
   constructor(props) {
@@ -16,13 +19,11 @@ class SingleColorPalette extends Component {
   gatherShades(palette, filteredColor) {
     let shades = [];
     let allColors = palette.colors;
-    //loop and match color
     for (let key in allColors) {
       shades = shades.concat(
         allColors[key].filter((color) => color.id === filteredColor)
       );
     }
-    //return given shades
     return shades.slice(1).reverse();
   }
 
@@ -46,7 +47,7 @@ class SingleColorPalette extends Component {
         <Navbar sliderOpen={false} handleChange={this.changeFormat} />
         <div className={classes.PaletteColors}>{colorBoxes}</div>
         <footer className={classes.PaletteFooter}>
-          {this.props.palette.paletteName}
+          {palette.paletteName}
           <Link to={`/palette/${palette.id}`}>Back</Link>
         </footer>
       </div>
