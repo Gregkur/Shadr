@@ -45,6 +45,7 @@ const styles = {
     marginBottom: "-4px",
   },
   deleteIcon: {
+    boxSizing: "content-box !important",
     color: "white",
     backgroundColor: "#eb3d30",
     width: "20px",
