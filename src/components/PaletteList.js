@@ -15,6 +15,7 @@ import Avatar from "@material-ui/core/Avatar";
 import MiniPalette from "./MiniPalette";
 import styles from "../styles/PaletteListStyles";
 import Logo from "./Logo";
+import { withRouter } from "react-router";
 
 class PaletteList extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class PaletteList extends Component {
     this.openDialog = this.openDialog.bind(this);
     this.closeDialog = this.closeDialog.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.goToPalette = this.goToPalette.bind(this);
   }
   openDialog(id) {
     this.setState({ openDeleteDialog: true, deletingId: id });
@@ -54,8 +56,8 @@ class PaletteList extends Component {
               <MiniPalette
                 {...palette}
                 key={palette.id}
-                handleClick={() => this.goToPalette(palette.id)}
-                // deletePalette={deletePalette}
+                id={palette.id}
+                goToPalette={this.goToPalette}
                 openDialog={this.openDialog}
               />
             ))}

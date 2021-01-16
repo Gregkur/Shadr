@@ -71,8 +71,8 @@ function App() {
                     <Page>
                       <PaletteList
                         palettes={palettes}
-                        {...routeProps}
                         deletePalette={deletePalette}
+                        {...routeProps}
                       />
                     </Page>
                   )}
@@ -86,6 +86,7 @@ function App() {
                         palette={generatePalette(
                           findPalette(routeProps.match.params.id)
                         )}
+                        {...routeProps}
                       />
                     </Page>
                   )}
