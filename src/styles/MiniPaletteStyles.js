@@ -12,7 +12,7 @@ const styles = {
       transform: "scale(1.1)",
       opacity: "0.9",
       scale: "1.2",
-      border: "2px solid #fce75a",
+      // border: "2px solid #fce75a",
       "& svg": {
         opacity: 1,
       },

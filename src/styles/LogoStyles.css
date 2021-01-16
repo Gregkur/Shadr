@@ -17,26 +17,28 @@
   transform: scale(1.3);
 }
 .text:hover {
-  font-weight: 700;
+  font-weight: 900;
   transform: scale(1);
   filter: saturate(150%);
+  /* text-decoration: line-through 100px; */
 }
 .one {
   color: #fcdd14;
 }
 
 .two {
-  color: #fce02b;
+  color: #fcf23b;
 }
 .three {
-  color: #fce343;
+  color: #fdf561;
 }
+
 .four {
-  color: #fce75a;
+  color: #fdf788;
 }
 .five {
-  color: #fdea72;
+  color: #fefaaf;
 }
 .six {
-  color: #fdee89;
+  color: #fefcd6;
 }
