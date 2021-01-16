@@ -67,6 +67,7 @@ class PaletteList extends Component {
             </Link>
           </div>
         </div>
+        {/* Pop Up */}
         <Dialog
           open={openDeleteDialog}
           aria-labelledby="delete-dialog-title"

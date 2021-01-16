@@ -11,11 +11,12 @@ import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
 import DraggableColorList from "./DraggableColorList";
 import styles from "../styles/NewPaletteFormStyles";
+import seedColors from "../seedColors";
 
 function NewPaletteForm(props) {
   const { classes } = props;
   const [open, setOpen] = useState(false);
-  let [colors, setColors] = useState(props.seedColors);
+  let [colors, setColors] = useState(seedColors[3].colors);
   const paletteIsFull = colors.length >= props.maxColors;
 
   const handleDrawerOpen = () => {
@@ -52,7 +53,7 @@ function NewPaletteForm(props) {
   };
 
   const getRandomColor = () => {
-    const allColors = props.palettes.map((palette) => palette.colors).flat();
+    const allColors = seedColors.map((palette) => palette.colors).flat();
     const randomColor = allColors[Math.floor(Math.random() * allColors.length)];
     setColors([...colors, randomColor]);
   };
