@@ -1,17 +1,18 @@
 const styles = {
   root: {
     backgroundColor: "white",
-    border: "1px solid black",
+    border: "2px solid black",
     borderRadius: "5px",
     padding: "0.5rem",
     position: "relative",
     overflow: "hidden",
-    transition: "transform 0.3s ease-in-out",
+    transition: "all 0.3s ease-in-out",
     cursor: "pointer",
     "&:hover": {
       transform: "scale(1.1)",
       opacity: "0.9",
       scale: "1.2",
+      border: "2px solid #fce75a",
       "& svg": {
         opacity: 1,
       },

@@ -2,12 +2,13 @@ import sizes from "./sizes";
 import bg from "./bg.svg";
 const styles = {
   root: {
-    backgroundColor: "#fffff",
+    // linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(252,221,20,0.9) 70%)
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "center",
     overflowY: "scroll",
+    /* background by SVGBackgrounds.com */
     backgroundImage: `url(${bg})`,
   },
   container: {
