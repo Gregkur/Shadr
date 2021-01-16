@@ -23,6 +23,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-sortable-hoc": "^1.11.0",
+    "react-transition-group": "^4.4.1",
     "use-state-with-callback": "^2.0.3",
     "web-vitals": "^0.2.4"
   },
