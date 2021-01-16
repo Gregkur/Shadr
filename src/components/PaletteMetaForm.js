@@ -52,6 +52,9 @@ class PaletteMetaForm extends Component {
     };
 
     this.props.savePalette(newPaletteData);
+    this.setState({
+      stage: "",
+    });
   }
   render() {
     const { stage, newPaletteName } = this.state;
