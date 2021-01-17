@@ -16,17 +16,10 @@ const styles = {
   logo: {
     marginRight: "15px",
     padding: "0 13px",
-    fontSize: "22px",
-    // backgroundColor: "#eceff1",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    "& a": {
-      textDecoration: "none",
-      color: "black",
-    },
-    [sizes.down("xs")]: {
-      display: "none",
+    "& :hover": {
+      transition: "all 0.2s ease-in-out",
+      opacity: "0.5",
+      transform: "scale(1.1)",
     },
   },
   slider: {
@@ -55,6 +48,11 @@ const styles = {
   },
   sliderContainer: {
     display: "flex",
+    "& span": {
+      [sizes.down("xs")]: {
+        display: "none",
+      },
+    },
   },
   selectContainer: {
     marginLeft: "auto",

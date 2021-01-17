@@ -8,6 +8,7 @@ import Select from "@material-ui/core/Select";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import "rc-slider/assets/index.css";
+import logo from "../styles/logoBlack.svg";
 
 class Navbar extends Component {
   constructor(props) {
@@ -34,7 +35,9 @@ class Navbar extends Component {
     return (
       <header className={classes.Navbar}>
         <div className={classes.logo}>
-          <Link to="/">Shades</Link>
+          <Link to="/">
+            <img src={logo} alt="logo" height="50px" />
+          </Link>
         </div>
         {sliderOpen && (
           <div className={classes.sliderContainer}>
