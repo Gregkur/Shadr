@@ -11,7 +11,6 @@ const styles = {
     },
   },
   root: {
-    // linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(252,221,20,0.9) 70%)
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
@@ -35,7 +34,7 @@ const styles = {
     width: "100%",
     justifyContent: "center",
     letterSpacing: "3px",
-    textTransform: "uppercase",
+    // textTransform: "uppercase",
     fontWeight: "300",
   },
   palettes: {

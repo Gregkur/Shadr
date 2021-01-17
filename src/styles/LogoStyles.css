@@ -14,7 +14,8 @@
   margin-right: 1px;
   cursor: default;
   transition: all 0.3s ease-in-out;
-  transform: scale(1.3);
+  transform: scale(1.2);
+  /* text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5); */
 }
 .text:hover {
   font-weight: 900;
@@ -24,20 +25,26 @@
 }
 .one {
   color: #fcdd14;
+  font-size: 8rem;
 }
 .two {
   color: #fcf23b;
+  font-size: 4rem;
 }
 .three {
   color: #fdf561;
+  font-size: 4rem;
 }
 
 .four {
   color: #fdf788;
+  font-size: 4rem;
 }
 .five {
   color: #fefaaf;
+  font-size: 4rem;
 }
 .six {
   color: #fefcd6;
+  font-size: 4rem;
 }

@@ -8,6 +8,7 @@ import NewPaletteForm from "./components/NewPaletteForm";
 import Page from "./components/Page";
 import { generatePalette } from "./colorHelpers";
 import seedColors from "./seedColors";
+import "./App.css";
 
 function App() {
   const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
