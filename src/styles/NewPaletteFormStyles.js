@@ -15,17 +15,23 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    // backgroundColor: "#fcdd14",
+    borderBottom: "5px solid #fcdd14",
+    borderTop: "5px solid #fcdd14",
+    borderLeft: "5px solid #fcdd14",
+
     [sizes.down("xs")]: {
       width: "500px",
     },
   },
   drawerHeader: {
-    display: "flex",
+    // display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
+    display: "none",
   },
   content: {
     flexGrow: 1,

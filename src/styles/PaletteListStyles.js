@@ -34,7 +34,6 @@ const styles = {
     width: "100%",
     justifyContent: "center",
     letterSpacing: "3px",
-    // textTransform: "uppercase",
     fontWeight: "300",
   },
   palettes: {

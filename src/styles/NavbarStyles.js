@@ -33,9 +33,9 @@ const styles = {
       height: "8px",
     },
     "& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus,.rc-slider-handle:hover": {
-      backgroundColor: "#1db0b8",
+      backgroundColor: "#2F91D3",
       outline: "none",
-      border: "2px solid #1db0b8",
+      border: "2px solid #2F91D3",
       boxShadow: "none",
       width: "18px",
       height: "18px",

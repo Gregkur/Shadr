@@ -16,6 +16,8 @@ const styles = (theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     height: "64px",
+    backgroundColor: "#fcdd14",
+    borderBottom: "5px solid white",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
