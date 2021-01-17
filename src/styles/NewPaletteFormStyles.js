@@ -9,33 +9,25 @@ const styles = (theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    height: "100vh",
   },
   drawerPaper: {
     width: drawerWidth,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    // backgroundColor: "#fcdd14",
-    borderBottom: "5px solid #fcdd14",
-    borderTop: "5px solid #fcdd14",
-    borderLeft: "5px solid #fcdd14",
-
+    border: "5px solid #fcdd14 !important",
     [sizes.down("xs")]: {
       width: "500px",
     },
   },
   drawerHeader: {
-    // display: "flex",
-    alignItems: "center",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
     display: "none",
   },
   content: {
     flexGrow: 1,
-    height: "calc(100vh - 64px)",
+    height: "100vh",
+    paddingTop: "64px",
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,

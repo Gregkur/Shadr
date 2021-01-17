@@ -29,7 +29,7 @@ const styles = {
   boxContent: {
     position: "absolute",
     padding: "10px 0px 10px 10px",
-    width: "95%",
+    width: "100%",
     left: "0px",
     bottom: "0px",
     color: "rgba(0, 0, 0, 0.8)",
