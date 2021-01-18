@@ -21,9 +21,6 @@ const styles = (theme) => ({
       width: "500px",
     },
   },
-  drawerHeader: {
-    display: "none",
-  },
   content: {
     flexGrow: 1,
     height: "100vh",

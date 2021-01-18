@@ -41,9 +41,19 @@ const styles = (theme) => ({
   },
   button: {
     margin: "0 0.5rem",
+    padding: "10px",
+    color: "rgba(0, 0, 0, 0.87)",
+    transition: "0.4s ease-in-out",
     [sizes.down("sm")]: {
       margin: "0 0.2rem",
       padding: "0",
+    },
+    "&:hover": {
+      color: "white",
+      transform: "scale(1.1)",
+      opacity: "0.9",
+      backgroundColor: "#FCE02B",
+      borderRadius: "39px",
     },
   },
 });

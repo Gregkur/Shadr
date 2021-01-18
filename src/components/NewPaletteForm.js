@@ -78,8 +78,8 @@ function NewPaletteForm(props) {
           paper: classes.drawerPaper,
         }}
       >
+        <div style={{ backgroundColor: "#ababab" }}></div>
         <div className={classes.container}>
-          <Divider />
           <Typography variant="h4" gutterBottom>
             Design Your Palette
           </Typography>

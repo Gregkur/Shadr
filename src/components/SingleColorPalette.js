@@ -47,7 +47,7 @@ class SingleColorPalette extends Component {
         <Navbar sliderOpen={false} handleChange={this.changeFormat} />
         <div className={classes.PaletteColors}>{colorBoxes}</div>
         <footer className={classes.PaletteFooter}>
-          {palette.paletteName}
+          <p>{palette.paletteName}</p>
           <Link to={`/palette/${palette.id}`}>Back</Link>
         </footer>
       </div>
