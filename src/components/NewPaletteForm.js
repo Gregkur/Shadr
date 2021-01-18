@@ -75,7 +75,7 @@ function NewPaletteForm(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.newPaletteForm}>
       <PaletteFormNav
         open={open}
         palettes={props.palettes}

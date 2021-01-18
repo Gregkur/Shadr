@@ -30,15 +30,15 @@ class MiniPalette extends PureComponent {
       />
     ));
     return (
-      <div className={classes.root} onClick={this.handleClick}>
+      <div className={classes.miniPalette} onClick={this.handleClick}>
         <DeleteIcon
-          className={classes.deleteIcon}
+          className={classes.miniDeleteIcon}
           onClick={this.removePalette}
         />
-        <div className={classes.colors}>{miniColorBoxes}</div>
-        <h5 className={classes.title}>
+        <div className={classes.miniColors}>{miniColorBoxes}</div>
+        <h5 className={classes.miniTitle}>
           {paletteName}
-          <span className={classes.emoji}>{emoji}</span>
+          <span className={classes.miniEmoji}>{emoji}</span>
         </h5>
       </div>
     );

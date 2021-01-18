@@ -4,7 +4,7 @@ import sizes from "./sizes";
 const drawerWidth = DRAWER_WIDTH;
 
 const styles = (theme) => ({
-  root: {
+  newPaletteForm: {
     display: "flex",
   },
   drawer: {

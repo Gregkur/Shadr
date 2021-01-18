@@ -12,7 +12,7 @@ const styles = {
     },
   },
 
-  root: {
+  paletteList: {
     height: "100%",
     display: "flex",
     alignItems: "flex-start",
@@ -22,7 +22,7 @@ const styles = {
     /* background by SVGBackgrounds.com */
     backgroundImage: `url(${bg})`,
   },
-  container: {
+  paletteContainer: {
     width: "50%",
     display: "flex",
     alignItems: "flex-start",
@@ -32,7 +32,7 @@ const styles = {
       width: "75%",
     },
   },
-  nav: {
+  logo: {
     display: "flex",
     width: "100%",
     justifyContent: "center",

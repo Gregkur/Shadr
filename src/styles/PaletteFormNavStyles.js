@@ -4,7 +4,7 @@ import sizes from "./sizes";
 const drawerWidth = DRAWER_WIDTH;
 
 const styles = (theme) => ({
-  root: {
+  paletteFormNav: {
     display: "flex",
   },
   appBar: {
@@ -33,13 +33,13 @@ const styles = (theme) => ({
   hide: {
     display: "none",
   },
-  navBtns: {
+  naviBtns: {
     marginRight: "1rem",
     [sizes.down("md")]: {
       marginRight: "0",
     },
   },
-  button: {
+  backButtons: {
     margin: "0 0.5rem",
     padding: "10px",
     color: "rgba(0, 0, 0, 0.87)",

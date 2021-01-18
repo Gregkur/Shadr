@@ -48,7 +48,7 @@ class PaletteFormNav extends Component {
     } = this.props;
     const { formShowing } = this.state;
     return (
-      <div className={classes.root}>
+      <div className={classes.paletteFormNav}>
         {" "}
         <CssBaseline />
         <AppBar
@@ -73,14 +73,14 @@ class PaletteFormNav extends Component {
               Create a new Palette!
             </Typography>
           </Toolbar>
-          <div className={classes.navBtns}>
+          <div className={classes.naviBtns}>
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Button className={classes.button} color="primary">
+              <Button className={classes.backButtons} color="primary">
                 Go Back
               </Button>
             </Link>
             <Button
-              className={classes.button}
+              className={classes.backButtons}
               color="primary"
               onClick={this.showForm}
             >

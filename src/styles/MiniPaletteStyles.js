@@ -1,6 +1,6 @@
 import sizes from "../styles/sizes";
 const styles = {
-  root: {
+  miniPalette: {
     backgroundColor: "white",
     border: "2px solid black",
     borderRadius: "5px",
@@ -21,14 +21,14 @@ const styles = {
       },
     },
   },
-  colors: {
+  miniColors: {
     backgroundColor: "#fffff",
     height: "150px",
     width: "100%",
     borderRadius: "5px",
     overflow: "hidden",
   },
-  title: {
+  miniTitle: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -38,7 +38,7 @@ const styles = {
     fontSize: "1rem",
     position: "relative",
   },
-  emoji: { marginLeft: "0.5rem", fontSize: "1.5rem" },
+  miniEmoji: { marginLeft: "0.5rem", fontSize: "1.5rem" },
   miniColor: {
     height: "25%",
     width: "20%",
@@ -47,7 +47,7 @@ const styles = {
     position: "relative",
     marginBottom: "-4px",
   },
-  deleteIcon: {
+  miniDeleteIcon: {
     boxSizing: "content-box !important",
     color: "white",
     backgroundColor: "#eb3d30",

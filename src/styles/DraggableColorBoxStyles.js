@@ -1,7 +1,7 @@
 import sizes from "./sizes";
 
 const styles = {
-  root: {
+  draggableBox: {
     width: "20%",
     height: "25%",
     margin: "0 auto",
@@ -26,7 +26,7 @@ const styles = {
       height: "5%",
     },
   },
-  boxContent: {
+  draggableBoxContent: {
     position: "absolute",
     padding: "10px 0px 10px 10px",
     width: "100%",

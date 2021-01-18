@@ -47,9 +47,9 @@ class PaletteList extends Component {
     const { palettes, classes } = this.props;
     const { openDeleteDialog } = this.state;
     return (
-      <div className={classes.root}>
-        <div className={classes.container}>
-          <nav className={classes.nav}>
+      <div className={classes.paletteList}>
+        <div className={classes.paletteContainer}>
+          <nav className={classes.logo}>
             <Logo />
           </nav>
           <div className={classes.palettes}>

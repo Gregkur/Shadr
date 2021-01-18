@@ -1,5 +1,5 @@
 const styles = {
-  root: {
+  pickerContainer: {
     width: "100%",
   },
   picker: {

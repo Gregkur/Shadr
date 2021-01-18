@@ -55,7 +55,7 @@ class ColorPickerForm extends Component {
     const { paletteIsFull, classes } = this.props;
     const { currentColor, newColorName } = this.state;
     return (
-      <div className={classes.root}>
+      <div className={classes.pickerContainer}>
         <HexColorPicker
           color={currentColor}
           onChange={this.setColor}
