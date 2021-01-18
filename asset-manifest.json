@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Shadr/static/css/main.9cd3255d.chunk.css",
+    "main.js": "/Shadr/static/js/main.fb3c2fc3.chunk.js",
+    "main.js.map": "/Shadr/static/js/main.fb3c2fc3.chunk.js.map",
+    "runtime-main.js": "/Shadr/static/js/runtime-main.88995b4c.js",
+    "runtime-main.js.map": "/Shadr/static/js/runtime-main.88995b4c.js.map",
+    "static/css/2.2ee96150.chunk.css": "/Shadr/static/css/2.2ee96150.chunk.css",
+    "static/js/2.85dedfb8.chunk.js": "/Shadr/static/js/2.85dedfb8.chunk.js",
+    "static/js/2.85dedfb8.chunk.js.map": "/Shadr/static/js/2.85dedfb8.chunk.js.map",
+    "static/js/3.c9d44f49.chunk.js": "/Shadr/static/js/3.c9d44f49.chunk.js",
+    "static/js/3.c9d44f49.chunk.js.map": "/Shadr/static/js/3.c9d44f49.chunk.js.map",
+    "index.html": "/Shadr/index.html",
+    "static/css/2.2ee96150.chunk.css.map": "/Shadr/static/css/2.2ee96150.chunk.css.map",
+    "static/css/main.9cd3255d.chunk.css.map": "/Shadr/static/css/main.9cd3255d.chunk.css.map",
+    "static/js/2.85dedfb8.chunk.js.LICENSE.txt": "/Shadr/static/js/2.85dedfb8.chunk.js.LICENSE.txt",
+    "static/media/bg.8d3cd520.svg": "/Shadr/static/media/bg.8d3cd520.svg",
+    "static/media/logo.49097865.svg": "/Shadr/static/media/logo.49097865.svg",
+    "static/media/logoBlack.c0e5760c.svg": "/Shadr/static/media/logoBlack.c0e5760c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88995b4c.js",
+    "static/css/2.2ee96150.chunk.css",
+    "static/js/2.85dedfb8.chunk.js",
+    "static/css/main.9cd3255d.chunk.css",
+    "static/js/main.fb3c2fc3.chunk.js"
+  ]
+}
