@@ -22,6 +22,14 @@ const styles = (theme) => ({
       width: "500px",
     },
   },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
+    padding: "0 8px",
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end",
+  },
   content: {
     flexGrow: 1,
     height: "100vh",

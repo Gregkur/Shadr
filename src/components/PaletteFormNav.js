@@ -63,7 +63,6 @@ class PaletteFormNav extends Component {
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
-              onMouseOut={handleDrawerOpen}
               edge="start"
               className={clsx(classes.menuButton, open && classes.hide)}
             >

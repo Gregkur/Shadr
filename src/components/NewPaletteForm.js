@@ -6,6 +6,8 @@ import clsx from "clsx";
 
 import ColorPickerForm from "./ColorPickerForm";
 
+import IconButton from "@material-ui/core/IconButton";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { withStyles } from "@material-ui/core";
 import { arrayMove } from "react-sortable-hoc";
 import Drawer from "@material-ui/core/Drawer";
@@ -83,8 +85,6 @@ function NewPaletteForm(props) {
         handleDrawerOpen={handleDrawerOpen}
       />
       <Drawer
-        onMouseLeave={handleDrawerClose}
-        onTouchEnd={handleDrawerClose}
         onClose={handleDrawerClose}
         className={classes.drawer}
         variant="persistent"
@@ -94,6 +94,11 @@ function NewPaletteForm(props) {
           paper: classes.drawerPaper,
         }}
       >
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </div>
         <div style={{ backgroundColor: "#ababab" }}></div>
         <div className={classes.container}>
           <Typography variant="h4" gutterBottom>
@@ -130,7 +135,6 @@ function NewPaletteForm(props) {
           [classes.contentShift]: open,
         })}
       >
-        <div className={classes.drawerHeader} />
         <DraggableColorList
           colors={colors}
           removeColor={removeColor}
