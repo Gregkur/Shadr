@@ -7,7 +7,7 @@
 ![](https://i.ibb.co/mBmmpQ0/Group-1.png)
 
 Web app made using React JS with Hooks, React Router, Material UI and JSS.
-With the use of higher order components, state manaement and unidirectional data flow.
+With the use of higher order components, state management and unidirectional data flow.
 
 Based on Udemy course by Colt Steele.
 
