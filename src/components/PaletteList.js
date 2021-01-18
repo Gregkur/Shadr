@@ -63,7 +63,7 @@ class PaletteList extends Component {
               />
             ))}
             <Link className={classes.footer} to="/palette/new">
-              Create a new palette
+              Create Palette
             </Link>
           </div>
         </div>

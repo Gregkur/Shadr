@@ -72,6 +72,7 @@ const styles = {
     },
     [sizes.down("md")]: {
       gridColumn: "span 2",
+      marginBottom: "2rem",
     },
     [sizes.down("xs")]: {
       gridColumn: "span 1",
