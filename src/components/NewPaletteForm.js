@@ -1,17 +1,21 @@
 import React, { useState } from "react";
+
+import "react-colorful/dist/index.css";
+
+import clsx from "clsx";
+
+import ColorPickerForm from "./ColorPickerForm";
+
 import { withStyles } from "@material-ui/core";
 import { arrayMove } from "react-sortable-hoc";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
-import "react-colorful/dist/index.css";
-import clsx from "clsx";
+
 import PaletteFormNav from "./PaletteFormNav";
-import ColorPickerForm from "./ColorPickerForm";
 import DraggableColorList from "./DraggableColorList";
-import styles from "../styles/NewPaletteFormStyles";
 import seedColors from "../seedColors";
+import styles from "../styles/NewPaletteFormStyles";
 
 function NewPaletteForm(props) {
   const { classes } = props;

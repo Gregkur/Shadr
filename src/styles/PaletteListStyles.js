@@ -1,5 +1,6 @@
 import sizes from "./sizes";
 import bg from "./bg.svg";
+
 const styles = {
   "@global": {
     ".fade-exit": {
@@ -10,6 +11,7 @@ const styles = {
       transition: "opacity 0.3s ease-out",
     },
   },
+
   root: {
     height: "100vh",
     display: "flex",
@@ -33,8 +35,7 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    letterSpacing: "3px",
-    fontWeight: "300",
+    marginBottom: "0.4rem",
   },
   palettes: {
     boxSizing: "border-box",
@@ -60,6 +61,7 @@ const styles = {
     textDecoration: "none",
     borderRadius: "39px",
     padding: "21px",
+    marginBottom: "0.5rem",
     border: "2px solid rgb(255, 255, 255)",
     transition: "background 0.8s 0s ease, transform 0.3s ease-in-out",
     [sizes.down("xl")]: {

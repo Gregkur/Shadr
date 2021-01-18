@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
+
 import { MenuItem, Snackbar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/styles";
 import styles from "../styles/NavbarStyles";
-import Slider from "rc-slider";
 import Select from "@material-ui/core/Select";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import "rc-slider/assets/index.css";
+
 import logo from "../styles/logoBlack.svg";
 
 class Navbar extends Component {

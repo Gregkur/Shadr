@@ -1,4 +1,5 @@
 import sizes from "./sizes";
+
 const styles = {
   Navbar: {
     borderBottom: "5px solid white",

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import Palette from "./components/Palette";
 import PaletteList from "./components/PaletteList";
 import SingleColorPalette from "./components/SingleColorPalette";
 import NewPaletteForm from "./components/NewPaletteForm";
 import Page from "./components/Page";
+
 import { generatePalette } from "./colorHelpers";
 import seedColors from "./seedColors";
 import "./App.css";
@@ -42,6 +44,7 @@ function App() {
 
     return shuffled.slice(0, 15);
   };
+
   return (
     <Router>
       <Route

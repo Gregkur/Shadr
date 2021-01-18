@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+
 import { HexColorPicker } from "react-colorful";
+import "react-colorful/dist/index.css";
+
 import { withStyles } from "@material-ui/core/styles";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import Button from "@material-ui/core/Button";
-import "react-colorful/dist/index.css";
+
 import styles from "../styles/ColorPickerFormStyles";
 
 class ColorPickerForm extends Component {
