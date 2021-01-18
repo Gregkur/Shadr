@@ -50,6 +50,8 @@ const styles = {
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1, 100%)",
       gridGap: "1.4rem",
+      marginLeft: "1.5rem",
+      marginRight: "1.5rem",
     },
   },
   footer: {
@@ -72,6 +74,7 @@ const styles = {
     },
     [sizes.down("md")]: {
       gridColumn: "span 2",
+      marginBottom: "2rem",
     },
     [sizes.down("xs")]: {
       gridColumn: "span 1",
