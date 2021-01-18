@@ -69,7 +69,6 @@ function NewPaletteForm(props) {
         // eslint-disable-next-line no-loop-func
         (color) => color.name === randomColor.name
       );
-      console.log(randomColor);
     }
 
     setColors([...colors, randomColor]);
