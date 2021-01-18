@@ -4,7 +4,7 @@
 ## [Click here for Demo](https://shadr.herokuapp.com/)
 ## or here https://shadr.herokuapp.com/
 
-![](https://i.ibb.co/mBmmpQ0/Group-1.png)
+![](https://i.ibb.co/Xpq4Kx7/shadr-Demo.png)
 
 Web app made using React JS with Hooks, React Router, Material UI and JSS.
 With the use of higher order components, state management and unidirectional data flow.
