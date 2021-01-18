@@ -77,6 +77,15 @@ const styles = {
     },
     [sizes.down("xs")]: {
       gridColumn: "span 1",
+      bottom: "1.5rem",
+      position: "absolute",
+      transform: "rotate(45deg)",
+      left: "16.5rem",
+      padding: "7px",
+      fontSize: "16px",
+      textAlign: "center",
+      scale: "1.2",
+      backgroundColor: "#fcdd14",
     },
     "&:hover": {
       transform: "scale(1.1)",
