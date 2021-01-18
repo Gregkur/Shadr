@@ -7,8 +7,9 @@ const styles = {
     padding: "0.5rem",
     position: "relative",
     overflow: "hidden",
-    transition: "all 0.3s ease-in-out",
     cursor: "pointer",
+    transition: "all 0.3s ease-in-out",
+    "& svg": { transition: "all 0.3s ease-in-out" },
     "@media (hover: hover)": {
       "&:hover": {
         transform: "scale(1.1)",
