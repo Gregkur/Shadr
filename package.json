@@ -1,6 +1,6 @@
 {
-  "homepage": "https://gregkur.github.io/Shadr/",
-  "name": "react-palette",
+  "homepage": "https://shadr.herokuapp.com/",
+  "name": "shadr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
