@@ -58,7 +58,20 @@ function NewPaletteForm(props) {
 
   const getRandomColor = () => {
     const allColors = seedColors.map((palette) => palette.colors).flat();
-    const randomColor = allColors[Math.floor(Math.random() * allColors.length)];
+    let rand;
+    let randomColor;
+    let isDuplicateColor = true;
+
+    while (isDuplicateColor) {
+      rand = Math.floor(Math.random() * allColors.length);
+      randomColor = allColors[rand];
+      isDuplicateColor = colors.some(
+        // eslint-disable-next-line no-loop-func
+        (color) => color.name === randomColor.name
+      );
+      console.log(randomColor);
+    }
+
     setColors([...colors, randomColor]);
   };
 
