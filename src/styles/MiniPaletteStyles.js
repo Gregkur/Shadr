@@ -1,3 +1,4 @@
+import sizes from "../styles/sizes";
 const styles = {
   root: {
     backgroundColor: "white",
@@ -8,12 +9,14 @@ const styles = {
     overflow: "hidden",
     transition: "all 0.3s ease-in-out",
     cursor: "pointer",
-    "&:hover": {
-      transform: "scale(1.1)",
-      opacity: "0.9",
-      scale: "1.2",
-      "& svg": {
-        opacity: 1,
+    "@media (hover: hover)": {
+      "&:hover": {
+        transform: "scale(1.1)",
+        opacity: "0.9",
+        scale: "1.2",
+        "& svg": {
+          opacity: 1,
+        },
       },
     },
   },
@@ -57,6 +60,9 @@ const styles = {
     opacity: "0",
     transition: " all 0.4s ease-in-out",
     borderBottomLeftRadius: "6px",
+    [sizes.down("sm")]: {
+      opacity: "0.5",
+    },
     "&:hover": {
       backgroundColor: "transparent",
       transform: "scale(1.6)",
